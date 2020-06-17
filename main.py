@@ -303,6 +303,7 @@ def main():
     specs.update(parse_mobile_networks(raw_specs))
     specs.update(parse_camera(raw_specs))
     specs.update(parse_screen_res(raw_specs))
+    specs.update(parse_internalmem(raw_specs))
 
     specs.update(parse_model_name(raw_specs, vendor_list))
     specs['bluetooth'].update(parse_bluetooth_spec(raw_specs, additional_bt_specs))
