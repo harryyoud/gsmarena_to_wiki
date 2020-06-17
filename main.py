@@ -72,8 +72,8 @@ def parse_bluetooth_spec(spec_tags, additional_bt_specs):
 
 def parse_bluetooth_profile(spec_tags):
     bt_profs = []
-    raw_bt_info = spec_tags['bluetooth'][0].split(', ')
     try:
+        raw_bt_info = spec_tags['bluetooth'][0].split(', ')
         if 'aptX HD' in raw_bt_info:
             bt_profs.append('A2DP + aptX HD')
         elif 'aptX' in raw_bt_info:
